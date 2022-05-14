@@ -27,3 +27,16 @@ body {
 .team-card-title{
     text-align: center;
 }
+.team-card-score{
+    text-align: center;
+    font-size: 100px;
+    margin: 0px;
+}
+.score-card-button-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+.score-card-button{
+    font-size: 50px;
+}
