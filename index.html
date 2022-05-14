@@ -3,7 +3,32 @@
 <head>
     <title>Cricket-Score-Keeper</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="">
+    <script>
+        let scoreA=0;
+        let scoreB=0;
+        function incscoreA(){
+            scoreA++;
+            document.getElementById("scoreA").innerHTML = scoreA;
+        }
+        function incscoreB(){
+            scoreB++;
+            document.getElementById("scoreB").innerHTML = scoreB;
+        }
+        function decscoreA(){
+            scoreA--;
+            document.getElementById("scoreA").innerHTML = scoreA;
+        }
+        function decscoreB(){
+            scoreB--;
+            document.getElementById("scoreB").innerHTML = scoreB;
+        }
+        function reset(){
+            scoreA=0;
+            scoreB=0;
+            document.getElementById("scoreA").innerHTML = scoreA;
+            document.getElementById("scoreB").innerHTML = scoreB;
+        }
+    </script>
 </head>
 <body>
     <div class="app-title-container">
@@ -11,19 +36,26 @@
     </div>
     <div class="team-card-container">
         <div class="team-card">
-            <h2 class="team-card-title">A-Team</h2>
-            <p class="team-card-score">0</p>
+            <h2 class="team-card-title">🤷‍♂️ Mumbai-Indians 🤷‍♂️</h2>
+            <p class="team-card-score"id="scoreA">0</p>
+            <div class="score-card-button-container">
+                <span class="score-card-button" onclick="incscoreA()">👍</span>
+                <span class="score-card-button" onclick="decscoreA()">👎</span>
+            </div>
         </div>
         <div class="team-card">
-            <h2 class="team-card-title">B-Team</h2>
-            <p class="team-card-score">0</p>
+            <h2 class="team-card-title">🟠 Royal-Challengers 🟠</h2>
+            <p class="team-card-score" id="scoreB">0</p>
             <div class="score-card-button-container">
-                <span class="score-card-button">👍</span>
-                <span class="score-card-button">👎</span>
+                <span class="score-card-button"  onclick="incscoreB()">👍</span>
+                <span class="score-card-button"  onclick="decscoreB()">👎</span>
             </div>
         </div>
         
 
+    </div>
+    <div class="reset-button-container">
+        <button class="btn-reset" onclick="reset()">Reset</button>
     </div>
 </body>
 </html>
